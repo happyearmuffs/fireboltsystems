@@ -1,4 +1,4 @@
-.header-styles, .navigation {
+.header-styles, header, .navigation {
   width: 100%;
   height: 100px;
   background-color: #774089;
@@ -17,7 +17,8 @@
   float: right; }
 
 body {
-  font-family: "Open Sans", "sans-serif"; }
+  font-family: "Open Sans", "sans-serif";
+  text-align: center; }
 
 h1, h3 {
   color: #774089; }
@@ -29,15 +30,26 @@ h1 {
   margin: 30px 0 0; }
 
 h2 {
-  font-size: 16px;
-  font-weight: lighter;
-  margin: 15px 0 25px; }
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+  color: white; }
 
 h3 {
   font-size: 21px;
   font-weight: bold;
   font-style: italic;
-  margin: 15px 0 0; }
+  margin: 15px 0 0;
+  padding: 0 10px; }
+
+h4 {
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 15px 0 25px; }
+
+header h2 {
+  padding: 30px 0;
+  letter-spacing: 1px; }
 
 .content {
   max-width: 1020px;
@@ -72,6 +84,9 @@ h3 {
 section {
   text-align: center; }
 
+.two-tiles .tile {
+  margin: 0 10px; }
+
 .tile {
   display: inline-block;
   width: 300px;
@@ -86,3 +101,13 @@ section {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     border-radius: 5px; }
+
+.divider {
+  border-top: 1px solid #774089;
+  margin: 70px 0 0; }
+
+.divider-image-wrapper {
+  background-color: white;
+  width: 100px;
+  height: 56px;
+  margin: -29px auto 0; }
