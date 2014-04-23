@@ -1,9 +1,6 @@
-@media only screen and(max-width:1020px){
-	.three-tiles .tile, .two-tiles .tile{
+@media only screen and(max-width:1050px){
+	.tile, .tile:first-child{
 		display: block;
 		margin:0 auto 40px;
-	}
-	.tile.left, .tile.right{
-		float:none;
 	}
 }
