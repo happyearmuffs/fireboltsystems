@@ -150,9 +150,7 @@ section{
 	img{
 		width:300px;
 		height:100px;
-		border:1px solid $borderColor;
 		@include box-sizing(border-box);
-		@include border-radius(5px);
 	}
 }
 
@@ -168,7 +166,7 @@ section{
 	margin:-29px auto -50px;
 }
 .icon.gear{
-	margin:-1px 0 0 -4px;
+	margin:-2px 0 0 -5px;
 }
 //Media Queries
 @import "_media-queries";

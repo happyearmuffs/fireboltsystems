@@ -1,6 +1,8 @@
 @media only screen and(max-width:1050px){
+	.tiles{
+		margin:0;
+	}
 	.tile, .tile:first-child{
-		display: block;
-		margin:0 auto 40px;
+		margin:0 10px 40px;
 	}
 }
