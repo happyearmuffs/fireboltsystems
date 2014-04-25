@@ -181,3 +181,7 @@ section h1 {
 @media only screen and (max-width: 1030px) {
   .page-footer .mission-statement .mission {
     margin: 0; } }
+@media only screen and (max-width: 517px) {
+  .nav-item {
+    margin: 6px 0 0;
+    padding: 6px 16px; } }
