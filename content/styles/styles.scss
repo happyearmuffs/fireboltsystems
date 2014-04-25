@@ -4,6 +4,8 @@ $secondaryFontColor:#62437f;
 $primaryFont:'Open Sans', 'sans-serif';
 $borderColor:#62437f;
 $headerColor:#62437f;
+$footerColor:#62437f;
+$aboutColor:#d3d7dc;
 
 //Mixins
 @mixin border-radius($radius){
@@ -32,6 +34,11 @@ $headerColor:#62437f;
 body{
 	font-family:$primaryFont;
 	text-align:center;
+	margin:0;
+}
+
+p{
+	margin:0;
 }
 
 h1{
@@ -58,7 +65,7 @@ h3{
 	padding:0 10px;
 }
 
-h4{
+p{
 	color:$secondaryFontColor;
 	font-size:16px;
 	font-weight:lighter;
@@ -115,20 +122,25 @@ header{
 	margin:26px 0 0 0;
 	padding:11px 16px;
 	@include border-radius(5px);
-	font-size:21px;
-	letter-spacing:1px;
-	font-weight:bold;
-	font-style:italic;
-	color:white;
+	a{
+		font-size:21px;
+		letter-spacing:1px;
+		font-weight:bold;
+		font-style:italic;
+		text-decoration:none;
+		color:white;
+	}
 	&.selected, &:hover{
 		background-color:white;
-		color:$primaryFontColor;
 		cursor: pointer;
+		a{
+			color:$primaryFontColor;
+
+		}
 	}
 }
 
 section{
-	text-align:center;
 	h1{
 		margin:30px 0 0;
 	}
@@ -143,6 +155,7 @@ section{
 	display:inline-block;
 	width:300px;
 	text-align:left;
+	vertical-align:top;
 	margin:0 10px;
 	&:first-child{
 		margin:0 10px 0 0;
@@ -165,8 +178,62 @@ section{
 	height:56px;
 	margin:-29px auto -50px;
 }
+
 .icon.gear{
 	margin:-2px 0 0 -5px;
 }
+
+.page-footer{
+	background-color:$footerColor;
+	text-align:center;
+	overflow:hidden;
+	padding:35px 0;
+	h1{
+		color:white;
+		margin:0 0 35px;
+	}
+	h3{
+		margin:0 0 25px;
+		padding:0;
+	}
+	p{
+		span{
+			font-weight: normal;
+			font-style:italic;
+		}
+	}
+	.mission-statement{
+		max-width: 940px;
+		width:100%;
+		margin:0 auto 35px;
+		padding:35px 20px 40px;
+		background-color:$aboutColor;
+		@include border-radius(5px);
+		@include box-sizing(border-box);
+		border:1px solid white;
+		.statement{
+			max-width: 285px;
+			width:100%;
+			display: inline-block;
+			vertical-align: top;
+			text-align: left;
+		}
+		.mission{
+			margin:0 15px;
+		}
+	}
+	.about-us{
+		h3, p{
+			color:white;
+		}
+		h3{
+			padding:0;
+			margin:20px 0 0;
+		}
+	}
+}
+
+
+
 //Media Queries
 @import "_media-queries";

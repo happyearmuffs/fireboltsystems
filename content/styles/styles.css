@@ -12,7 +12,11 @@
 
 body {
   font-family: "Open Sans", "sans-serif";
-  text-align: center; }
+  text-align: center;
+  margin: 0; }
+
+p {
+  margin: 0; }
 
 h1 {
   color: #62437f;
@@ -35,7 +39,7 @@ h3 {
   margin: 15px 0 0;
   padding: 0 10px; }
 
-h4 {
+p {
   color: #62437f;
   font-size: 16px;
   font-weight: lighter;
@@ -79,21 +83,22 @@ header h2 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 21px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  font-style: italic;
-  color: white; }
+  border-radius: 5px; }
+  .nav-item a {
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    color: white; }
   .nav-item.selected, .nav-item:hover {
     background-color: white;
-    color: #62437f;
     cursor: pointer; }
+    .nav-item.selected a, .nav-item:hover a {
+      color: #62437f; }
 
-section {
-  text-align: center; }
-  section h1 {
-    margin: 30px 0 0; }
+section h1 {
+  margin: 30px 0 0; }
 
 .tiles {
   font-size: 0;
@@ -103,6 +108,7 @@ section {
   display: inline-block;
   width: 300px;
   text-align: left;
+  vertical-align: top;
   margin: 0 10px; }
   .tile:first-child {
     margin: 0 10px 0 0; }
@@ -125,9 +131,53 @@ section {
 .icon.gear {
   margin: -2px 0 0 -5px; }
 
+.page-footer {
+  background-color: #62437f;
+  text-align: center;
+  overflow: hidden;
+  padding: 35px 0; }
+  .page-footer h1 {
+    color: white;
+    margin: 0 0 35px; }
+  .page-footer h3 {
+    margin: 0 0 25px;
+    padding: 0; }
+  .page-footer p span {
+    font-weight: normal;
+    font-style: italic; }
+  .page-footer .mission-statement {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto 35px;
+    padding: 35px 20px 40px;
+    background-color: #d3d7dc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid white; }
+    .page-footer .mission-statement .statement {
+      max-width: 285px;
+      width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left; }
+    .page-footer .mission-statement .mission {
+      margin: 0 15px; }
+  .page-footer .about-us h3, .page-footer .about-us p {
+    color: white; }
+  .page-footer .about-us h3 {
+    padding: 0;
+    margin: 20px 0 0; }
+
 @media only screen and (max-width: 1050px) {
   .tiles {
     margin: 0; }
 
   .tile, .tile:first-child {
     margin: 0 10px 40px; } }
+@media only screen and (max-width: 1030px) {
+  .page-footer .mission-statement .mission {
+    margin: 0; } }
